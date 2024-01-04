@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="font.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="diary.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css">
+    <script src="https://kit.fontawesome.com/c227846767.js" crossorigin="anonymous"></script>"
+</head>
+<body>
+    <div class="bookcover">
+        <div class="bookdot">
+            <div class="page">
+                <div class="profile-container">
+                    <div class="header-profile-container"> 
+                        TODAY <span style="color: #FF4402"> 302 </span>  | TOTAL 913302 </div>
+                    <div class ="box profile-box">                        
+                        <div class="profile-image">
+                        <img 
+                        class="profile-image-img"
+                        src="profile-image.jpg"
+                        alt="프로필 이미지"
+                        />
+                        </div>
+                        <div class="profile-text font-kyobohand">
+                        내가 양파냐? <br /><br /> </div>
+                        <div class="profie-username font-kyobohand">
+                            <span tyle="color: #0f1b5c">박원빈</span>(♂)
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">파도타기<span class="tab">▼</span></button>
+                            <div class="dropdown-content">
+                                <a href="https://www.instagram.com/riize_official/" target="_blank">인스타그램 바로가기</a>
+                                <a href="http://www.riizeofficial.com/" target="_blank">홈페이지 바로가기</a>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="content-container">
+                    <div class = "header content-title">
+                        <div class="content-title-name"> 원빈࿁ㅣ의 추억⋌Б㉨ㅏ</div>
+                        <div class="content-title-url">https://url주소/나중에 입력 </div>
+                    </div>
+                    <div class="box content-box">
+                        <div class="calendar">
+                            <div class="date-today">01.05<br/>FRI</div>
+                            <div class="date-list">
+                                <div class="date"><span class="date-red">1</span></div>
+                                <div class="date">2</div>
+                                <div class="date">3</div>
+                                <div class="date">4</div>
+                                <div class="date">5</div>
+                                <div class="date"><span class="date-blue">6</span></div>
+                                <div class="date"><span class="date-red">7</span></div>
+                                <div class="date">8</div>
+                                <div class="date">9</div>
+                                <div class="date">10</div>
+                                <div class="date">11</div>
+                                <div class="date">12</div>
+                                <div class="date"><span class="date-blue">13</span></div>
+                                <div class="date"><span class="date-red">14</span></div>
+                                <div class="date">15</div>
+                                <div class="date">16</div>
+                                <div class="date">17</div>
+                                <div class="date">18</div>
+                                <div class="date">19</div>
+                                <div class="date"><span class="date-blue">20</span></div>
+                                <div class="date"><span class="date-red">21</span></div>
+                                <div class="date">22</div>
+                                <div class="date">23</div>
+                                <div class="date">24</div>
+                                <div class="date">25</div>
+                                <div class="date">26</div>
+                                <div class="date"><span class="date-blue">27</span></div>
+                                <div class="date"><span class="date-red">28</span></div>
+                                <div class="date">29</div>
+                                <div class="date">30</div>
+                                <div class="date">31</div>
+                            </div>
+                        </div>
+                        <div class="diary-scrollbox">
+                            <div class="diary">
+                                <div class="diary-date">2024.01.05. 금 18:00</div>
+                                <div class="diary-contents"><p>일기 내용을 작성해요</p>
+                                </div>
+                            </div>
+                            <div class="diary">
+                                <div class="diary-date">2024.01.04. 목 13:00</div>
+                                <div class="diary-contents"><p>일기 내용을 작성해요</p>
+                                </div>
+                            </div>
+                            <div class="diary">
+                                <div class="diary-date">2024.01.02. 화 18:00</div>
+                                <div class="diary-contents"><p>일기 내용을 작성해요</p>
+                                </div>
+                            </div>
+                            <div class="diary">
+                                <div class="diary-date">2024.01.01. 월 12:00</div>
+                                <div class="diary-contents"><p>일기 내용을 작성해요</p>
+                                </div>
+                            </div>
+                            <div class="button-box">	
+                                <button class="diary-button font-neo" onclick="getTextFile()"><i class="fas fa-lock"></i>원빈이의 비밀 일기</button>
+                            </div>
+                            <div class="diary" id="secret-box">
+                            <div class="diary-date"> 원빈이의 비밀 일기</div>
+                            <div class="diary-contents font-kyobohand" id="secret-diary"></div>
+                            </div>
+                         </div>
+                        </div>
+                        
+                        
+                </div>
+
+                <div class="menu-container">
+                  <div class="menu-button">
+                    <a href="home.html"><button>홈</button></a>
+                    <a href="#"><button>다이어리</button></a>
+                    <a href="photo.html"><button>사진첩</button></a>
+                    <a href="guestbook.html"><button>방명록</button></a>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function getTextFile() {
+        var input = document.createElement("input");
+        input.type = "file";
+        input.accept = "text/plain";
+        input.onchange = function(event){
+            processFile(event.target.files[0]);
+        };
+        input.click();
+    }
+
+    function processFile(file) {
+        var reader = new FileReader();
+         reader.readAsText(file, "utf-8");
+
+     reader.onload = function() {
+        document.getElementById("secret-diary").innerText = reader.result;
+        document.getElementById("secret-box").style.display = "block";
+    };
+    }
+</script>
+</body>
+</html>
